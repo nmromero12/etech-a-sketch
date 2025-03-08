@@ -17,3 +17,27 @@ rows.forEach(row => {
 
 });
 
+
+const columns = document.querySelectorAll('.column');
+
+columns.forEach(column => {
+    column.addEventListener('mouseenter', () => {
+      column.classList.add('hovered'); // Add 'hovered' class when the mouse enters
+    });
+  
+    column.addEventListener('mouseleave', () => {
+      
+    });
+  });
+
+const clear = document.querySelector('.clear');
+
+clear.addEventListener("click", () => {
+
+    columns.forEach(column => {
+        column.classList.remove("hovered")
+    })
+
+}
+)
+
