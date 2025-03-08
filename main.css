@@ -20,4 +20,11 @@ body {
     display: flex;
     height: 40px;
     flex: 1;
+    border: solid grey 1px;
+}
+
+.column {
+    
+    width: 40px;
+    border: solid grey 1px;
 }
