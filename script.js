@@ -118,6 +118,10 @@ resize.addEventListener("click", () => {
     let userInput;
     while (true) {
         userInput = prompt("Please enter a valid number between 1 and 100");
+
+        if (userInput == null) {
+            break;
+        }
         userInput = Number(userInput);
         if (!isNaN(userInput) && userInput >= 1 && userInput <= 100) {
             break;
