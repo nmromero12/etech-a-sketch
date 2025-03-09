@@ -129,7 +129,7 @@ resize.addEventListener("click", () => {
     createGrid(userInput);
 
     newGridColumns = document.querySelectorAll(".column");
-    newGridolumns.forEach(column => {
+    newGridColumns.forEach(column => {
         column.addEventListener('mouseenter', () => {
           column.classList.add('hovered'); // Add 'hovered' class when the mouse enters
         });
@@ -138,6 +138,14 @@ resize.addEventListener("click", () => {
           
         });
       });
+      clear.addEventListener("click", () => {
+
+        newGridColumns.forEach(column => {
+            column.classList.remove("hovered")
+        })
+    
+    }
+    )
     
 })
 
