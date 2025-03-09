@@ -1,0 +1,53 @@
+body {
+    height: 100vh; /* Take up full viewport height */
+    margin: 0; /* Remove default browser margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: aliceblue;
+    
+  }
+
+.grid-container{
+    display: flex;
+    border:solid black 1px;
+    width: 640px;
+    height: 640px;
+    margin-top: 50px;
+    flex-direction: column;
+
+}
+
+.reset-container{
+    display: flex;
+    height: 100px;
+    width: 640px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.row {
+    display: flex;
+    height: 40px;
+    flex: 1;
+    border: solid rgb(236, 231, 231) 1px;
+}
+
+.column {
+    
+    width: 40px;
+    border: solid rgb(236, 231, 231) 1px;
+}
+
+
+
+
+.column.hovered {
+    background-color: black;
+}
+
+button {
+    height: 50px;
+}
