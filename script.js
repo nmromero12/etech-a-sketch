@@ -34,7 +34,8 @@ const columns = document.querySelectorAll('.column');
 
 columns.forEach(column => {
     column.addEventListener('mouseenter', () => {
-      column.classList.add('hovered'); // Add 'hovered' class when the mouse enters
+      column.style.backgroundColor = getRandomRGB(); // Add 'hovered' class when the mouse enters
+      
     });
   
     column.addEventListener('mouseleave', () => {
@@ -49,7 +50,7 @@ const clear = document.querySelector('.clear');
 clear.addEventListener("click", () => {
 
     columns.forEach(column => {
-        column.classList.remove("hovered")
+        column.style.backgroundColor = "";
     })
 
 }
@@ -118,6 +119,8 @@ resize.addEventListener("click", () => {
     let userInput;
     while (true) {
         userInput = prompt("Please enter a valid number between 1 and 100");
+
+       
         userInput = Number(userInput);
         if (!isNaN(userInput) && userInput >= 1 && userInput <= 100) {
             break;
@@ -131,7 +134,7 @@ resize.addEventListener("click", () => {
     newGridColumns = document.querySelectorAll(".column");
     newGridColumns.forEach(column => {
         column.addEventListener('mouseenter', () => {
-          column.classList.add('hovered'); // Add 'hovered' class when the mouse enters
+          column.style.backgroundColor = getRandomRGB(); // Add 'hovered' class when the mouse enters
         });
       
         column.addEventListener('mouseleave', () => {
@@ -141,13 +144,20 @@ resize.addEventListener("click", () => {
       clear.addEventListener("click", () => {
 
         newGridColumns.forEach(column => {
-            column.classList.remove("hovered")
+            column.style.backgroundColor = "";
         })
     
     }
     )
     
 })
+
+function getRandomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256)
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
 
 
